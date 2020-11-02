@@ -8,3 +8,5 @@ const StudyPlanPage = () => {
         </SafeAreaView>
     );
 }
+
+export default StudyPlanPage;
