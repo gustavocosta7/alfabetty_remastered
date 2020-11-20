@@ -1,12 +1,13 @@
-import React from 'react'
-import { SafeAreaView, Text } from 'react-native';
+import React from 'react';
+import {SafeAreaView, Text, View} from 'react-native';
+import ExercisesListComp from '../components/ExercisesListComp';
 
 const StudyPlanPage = () => {
-    return (
-        <SafeAreaView>
-            <Text>Estou pronto</Text>
-        </SafeAreaView>
-    );
-}
+  return (
+    <SafeAreaView>
+      <ExercisesListComp />
+    </SafeAreaView>
+  );
+};
 
 export default StudyPlanPage;
