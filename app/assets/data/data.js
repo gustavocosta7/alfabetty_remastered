@@ -1,14 +1,14 @@
 import React from 'react';
-
-import Aviao from '../svg/travelling.svg';
-import Elefante from '../svg/words/elephant.svg';
-import Indio from '../svg/words/native.svg';
-import Ovo from '../svg/words/egg.svg';
-import Uva from '../svg/words/grapes.svg';
-import Leao from '../svg/words/lion.svg';
-import Jacare from '../svg/words/crocodilo.svg';
-import Lapis from '../svg/words/lapis.svg';
-import Macaco from '../svg/words/macaco.svg';
+import Alligator from '../svg/words/alligator-svg';
+import Aviao from '../svg/words/aviao-svg';
+import Elefante from '../svg/words/elefante-svg';
+import Indio from '../svg/words/indio-svg';
+import Lapis from '../svg/words/lapis-svg';
+import Lion from '../svg/words/lion-svg';
+import Monkey from '../svg/words/monkey-svg';
+import Ovo from '../svg/words/ovo-svg';
+import Uva from '../svg/words/uva-svg';
+import COLORS from './colors';
 
 const DATA = {
   classification: [
@@ -22,10 +22,11 @@ const DATA = {
             {
               word: 'avião',
               image: '',
-              drawing: <Aviao />,
+              drawing: <Aviao width={150} />,
+              color: COLORS['0'],
             },
           ],
-          concluded: 0
+          concluded: 0,
         },
         {
           id: '2',
@@ -34,10 +35,11 @@ const DATA = {
             {
               word: 'elefante',
               image: '',
-              drawing: Elefante,
+              drawing: <Elefante width={150} />,
+              color: COLORS['1'],
             },
           ],
-          concluded: 10
+          concluded: 10,
         },
         {
           id: '3',
@@ -46,10 +48,11 @@ const DATA = {
             {
               word: 'indio',
               image: '',
-              drawing: Indio,
+              drawing: <Indio width={150} />,
+              color: COLORS['2'],
             },
           ],
-          concluded: 40
+          concluded: 40,
         },
         {
           id: '4',
@@ -58,22 +61,24 @@ const DATA = {
             {
               word: 'ovo',
               image: '',
-              drawing: Ovo,
+              drawing: <Ovo width={150} />,
+              color: COLORS['3'],
             },
           ],
-          concluded: 70
+          concluded: 70,
         },
         {
-          id: '5',
+          id: '4',
           letter: 'u',
           words: [
             {
               word: 'uva',
               image: '',
-              drawing: Uva,
+              drawing: <Uva width={150} />,
+              color: COLORS['4'],
             },
           ],
-          concluded: 100
+          concluded: 70,
         },
       ],
     },
@@ -87,10 +92,11 @@ const DATA = {
             {
               word: 'leão',
               image: '',
-              drawing: Leao,
+              drawing: <Lion width={150} />,
+              color: COLORS['0'],
             },
           ],
-          concluded: 0
+          concluded: 0,
         },
         {
           id: 7,
@@ -99,10 +105,11 @@ const DATA = {
             {
               word: 'jacaré',
               image: '',
-              drawing: Jacare,
+              drawing: <Alligator width={150} />,
+              color: COLORS['1'],
             },
           ],
-          concluded: 0
+          concluded: 0,
         },
         {
           id: 8,
@@ -111,10 +118,11 @@ const DATA = {
             {
               word: 'lápis',
               image: '',
-              drawing: Lapis,
+              drawing: <Lapis width={150} />,
+              color: COLORS['2'],
             },
           ],
-          concluded: 0
+          concluded: 0,
         },
         {
           id: 9,
@@ -123,10 +131,11 @@ const DATA = {
             {
               word: 'macaco',
               image: '',
-              drawing: Macaco,
+              drawing: <Monkey width={150} />,
+              color: COLORS['3'],
             },
           ],
-          concluded: 0
+          concluded: 0,
         },
       ],
     },

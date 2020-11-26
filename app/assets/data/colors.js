@@ -1,9 +1,9 @@
 const COLORS = {
-    1: '#0074D9',
-    2: '#2ECC40',
-    3: '#FFDC00',
-    4: '#FF851B',
-    5: '#F012BE'    
-}
+  0: '#0074D9',
+  1: '#2ECC40',
+  2: '#FFDC00',
+  3: '#FF851B',
+  4: '#F012BE',
+};
 
 export default COLORS;

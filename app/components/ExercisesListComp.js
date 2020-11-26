@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, FlatList, View, SafeAreaView} from 'react-native';
+import {Text, FlatList, SafeAreaView, StyleSheet} from 'react-native';
 import DATA from '../assets/data/data';
 import ButtonLetterComp from './ButtonLetterComp';
 
@@ -10,7 +10,7 @@ const ExercisesListComp = () => {
       renderItem={({item, index}) => {
         return (
           <>
-            <Text>{item.category}</Text>
+            <Text style={styles.category}>{item.category}</Text>
             <LetterList letters={item.letters} />
           </>
         );
@@ -26,7 +26,7 @@ const LetterList = (props) => {
       <FlatList
         data={props.letters}
         renderItem={({item, index}) => {
-          return <ButtonLetterComp letter={item}/>;
+          return <ButtonLetterComp letter={item} index={index} />;
         }}
         keyExtractor={(item, index) => index.toString()}
       />
@@ -35,3 +35,12 @@ const LetterList = (props) => {
 };
 
 export default ExercisesListComp;
+
+const styles = StyleSheet.create({
+  category: {
+    marginLeft: 20,
+    marginBottom: 20,
+    fontSize: 30,
+    fontFamily: 'RobotoMedium',
+  },
+});

@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import FillStar from '../assets/svg/fillStar.svg';
 import EmptyStar from '../assets/svg/emptyStar.svg';
 
@@ -30,7 +30,6 @@ function setsStarAmount(concluded) {
 const StatsStarComp = (props) => {
   const quantityStar = setsStarAmount(props.concluded);
   const {filledStar, emptyStar} = quantityStar;
-  console.log(quantityStar);
   let viewStars = [];
 
   for (let index = 0; index < filledStar; index++) {

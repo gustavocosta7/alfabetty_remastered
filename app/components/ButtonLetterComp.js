@@ -1,30 +1,25 @@
 import React from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {Pressable, StyleSheet, Text, View, Icon} from 'react-native';
 import StatsStarComp from './StatsStarComp';
 
 const ButtonLetterComp = (props) => {
   const {letter} = props;
+  const {drawing} = letter.words[0];
+
   return (
     <Pressable
-    onPress={() => {
-      console.log(letter);
-    }}
-    style={({pressed}) => [
-      {
-        backgroundColor: pressed ? '#7FDBFF' : '#0074D9',
-      },
-      styles.root
-    ]}>
-        <View>
-          <Text style={styles.text}>
-            {letter.letter.toUpperCase()}
-            {letter.letter}
-          </Text>
-          <StatsStarComp concluded={letter.concluded}/>
-        </View>
-        <View>
-          <Text>icone</Text>
-        </View>
+      onPress={() => {}}
+      style={({pressed}) => [
+        {
+          backgroundColor: pressed ? '#7FDBFF' : letter.words[0].color,
+        },
+        styles.root,
+      ]}>
+      <View>
+        <Text style={styles.text}>{letter.letter.toUpperCase()}</Text>
+        <StatsStarComp concluded={letter.concluded} />
+      </View>
+      <View style={styles.card}>{drawing}</View>
     </Pressable>
   );
 };
@@ -37,17 +32,25 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     borderRadius: 10,
-    marginBottom: 10,
-    marginLeft: 10,
-    marginRight: 10,
+    marginBottom: 20,
+    marginLeft: 20,
+    marginRight: 20,
     padding: 10,
+    paddingLeft: 40,
   },
   text: {
     color: 'white',
     fontSize: 68,
-    fontFamily: 'Arial Narrow Bold',
+    fontFamily: 'RobotoMedium',
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10,
+    marginBottom: 20,
+  },
+  card: {
+    padding: 10,
+  },
+  star: {
+    marginTop: 20,
   },
 });
