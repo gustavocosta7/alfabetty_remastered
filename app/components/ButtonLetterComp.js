@@ -1,5 +1,5 @@
 import React from 'react';
-import {Pressable, StyleSheet, Text, View, Icon} from 'react-native';
+import {Pressable, StyleSheet, Text, View} from 'react-native';
 import StatsStarComp from './StatsStarComp';
 
 const ButtonLetterComp = (props) => {

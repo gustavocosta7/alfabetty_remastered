@@ -1,11 +1,13 @@
 import React from 'react';
 import {Text, FlatList, SafeAreaView, StyleSheet} from 'react-native';
 import DATA from '../assets/data/data';
-import ButtonLetterComp from './ButtonLetterComp';
+import ActivitySliderComp from './ActivitySliderComp';
+import ActivityListHeader from './ActivityListHeader';
 
 const ExercisesListComp = () => {
   return (
     <FlatList
+      ListHeaderComponent={ActivityListHeader}
       data={DATA.classification}
       renderItem={({item, index}) => {
         return (
@@ -23,13 +25,7 @@ const ExercisesListComp = () => {
 const LetterList = (props) => {
   return (
     <SafeAreaView>
-      <FlatList
-        data={props.letters}
-        renderItem={({item, index}) => {
-          return <ButtonLetterComp letter={item} index={index} />;
-        }}
-        keyExtractor={(item, index) => index.toString()}
-      />
+      <ActivitySliderComp words={props.letters} />
     </SafeAreaView>
   );
 };

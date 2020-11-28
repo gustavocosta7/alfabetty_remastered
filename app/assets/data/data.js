@@ -139,6 +139,120 @@ const DATA = {
         },
       ],
     },
+    {
+      category: 'ÃO,J,L,M',
+      letters: [
+        {
+          id: 6,
+          letter: 'ão',
+          words: [
+            {
+              word: 'leão',
+              image: '',
+              drawing: <Lion width={150} />,
+              color: COLORS['0'],
+            },
+          ],
+          concluded: 0,
+        },
+        {
+          id: 7,
+          letter: 'j',
+          words: [
+            {
+              word: 'jacaré',
+              image: '',
+              drawing: <Alligator width={150} />,
+              color: COLORS['1'],
+            },
+          ],
+          concluded: 0,
+        },
+        {
+          id: 8,
+          letter: 'l',
+          words: [
+            {
+              word: 'lápis',
+              image: '',
+              drawing: <Lapis width={150} />,
+              color: COLORS['2'],
+            },
+          ],
+          concluded: 0,
+        },
+        {
+          id: 9,
+          letter: 'm',
+          words: [
+            {
+              word: 'macaco',
+              image: '',
+              drawing: <Monkey width={150} />,
+              color: COLORS['3'],
+            },
+          ],
+          concluded: 0,
+        },
+      ],
+    },
+    {
+      category: 'ÃO,J,L,M',
+      letters: [
+        {
+          id: 6,
+          letter: 'ão',
+          words: [
+            {
+              word: 'leão',
+              image: '',
+              drawing: <Lion width={150} />,
+              color: COLORS['0'],
+            },
+          ],
+          concluded: 0,
+        },
+        {
+          id: 7,
+          letter: 'j',
+          words: [
+            {
+              word: 'jacaré',
+              image: '',
+              drawing: <Alligator width={150} />,
+              color: COLORS['1'],
+            },
+          ],
+          concluded: 0,
+        },
+        {
+          id: 8,
+          letter: 'l',
+          words: [
+            {
+              word: 'lápis',
+              image: '',
+              drawing: <Lapis width={150} />,
+              color: COLORS['2'],
+            },
+          ],
+          concluded: 0,
+        },
+        {
+          id: 9,
+          letter: 'm',
+          words: [
+            {
+              word: 'macaco',
+              image: '',
+              drawing: <Monkey width={150} />,
+              color: COLORS['3'],
+            },
+          ],
+          concluded: 0,
+        },
+      ],
+    },
   ],
 };
 
