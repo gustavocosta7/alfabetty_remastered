@@ -1,5 +1,5 @@
-import React from 'react';
-import {Router, Scene, Stack} from 'react-native-router-flux';
+import React from 'react'
+import { Router, Scene, Stack } from 'react-native-router-flux';
 import Home from '../pages/HomePage';
 import StudyPlanPage from '../pages/StudyPlanPage';
 
