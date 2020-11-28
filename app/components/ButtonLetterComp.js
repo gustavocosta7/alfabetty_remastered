@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     marginRight: 20,
     padding: 10,
     paddingLeft: 40,
+    elevation: 4,
   },
   text: {
     color: 'white',
