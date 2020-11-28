@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Play from '../assets/svg/play.svg'
 import Config from '../assets/svg/config.svg'
 import Stats from '../assets/svg/stats.svg'
+import { Actions } from 'react-native-router-flux';
 
 const HomeButtonsComponent = () => {
     return (
@@ -10,7 +11,7 @@ const HomeButtonsComponent = () => {
             <TouchableOpacity style={[styles.button, styles.buttonSecondary, styles.buttonStats]}>
                 <Stats width={40} height={40}/>
             </TouchableOpacity>
-            <TouchableOpacity style={[styles.button, styles.buttonPrimary, styles.buttonPlay]}>
+            <TouchableOpacity style={[styles.button, styles.buttonPrimary, styles.buttonPlay]} onPress={() => Actions.studyPlan()}>
                 <Play width={60} height={60}/>
             </TouchableOpacity>
             <TouchableOpacity style={[styles.button,styles.buttonSecondary, styles.buttonConfig]}>
