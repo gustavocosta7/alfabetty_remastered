@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import FillStar from '../assets/svg/fillStar.svg';
 import EmptyStar from '../assets/svg/emptyStar.svg';
 

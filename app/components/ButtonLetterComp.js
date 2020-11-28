@@ -5,7 +5,6 @@ import StatsStarComp from './StatsStarComp';
 const ButtonLetterComp = (props) => {
   const {letter} = props;
   const {drawing} = letter.words[0];
-
   return (
     <Pressable
       onPress={() => {}}
