@@ -3,6 +3,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import BackButton from '../assets/svg/back-button';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
+import {Actions} from 'react-native-router-flux';
 
 const ActivityListHeader = () => {
   return (
@@ -10,7 +11,7 @@ const ActivityListHeader = () => {
       <View>
         <Pressable
           onPress={() => {
-            console.log('olá');
+            Actions.popTo('home');
           }}>
           <BackButton width={80} />
         </Pressable>

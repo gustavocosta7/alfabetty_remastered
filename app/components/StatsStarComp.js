@@ -45,10 +45,9 @@ const StatsStarComp = (props) => {
 
 export default StatsStarComp;
 
-
 const styles = StyleSheet.create({
-    content: {
-        flex: 1,
-        flexDirection: 'row'
-    }
-})
+  content: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+});
