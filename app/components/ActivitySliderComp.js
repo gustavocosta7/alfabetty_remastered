@@ -5,8 +5,8 @@ import ButtonLetterComp from './ButtonLetterComp';
 const ActivitySliderComp = (props) => {
   const {words} = props;
   let buttonWords = [];
-  words.map((word) => {
-    buttonWords.push(<ButtonLetterComp letter={word} />);
+  words.map((word, index) => {
+    buttonWords.push(<ButtonLetterComp key={index} letter={word} />);
   });
 
   return (

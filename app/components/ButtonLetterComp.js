@@ -1,6 +1,7 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import StatsStarComp from './StatsStarComp';
+import {Actions} from 'react-native-router-flux';
 
 const ButtonLetterComp = (props) => {
   const {letter} = props;
@@ -8,7 +9,9 @@ const ButtonLetterComp = (props) => {
 
   return (
     <Pressable
-      onPress={() => {}}
+      onPress={() => {
+        Actions.exercises({letter: letter});
+      }}
       style={({pressed}) => [
         {
           backgroundColor: pressed ? '#7FDBFF' : letter.words[0].color,
