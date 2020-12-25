@@ -1,7 +1,8 @@
-import React from 'react'
-import { Router, Scene, Stack } from 'react-native-router-flux';
+import React from 'react';
+import {Router, Scene, Stack} from 'react-native-router-flux';
 import Home from '../pages/HomePage';
 import StudyPlanPage from '../pages/StudyPlanPage';
+import ExercisesPage from '../pages/ExercicesPage';
 
 const Routers = () => (
   <Router>
@@ -13,6 +14,7 @@ const Routers = () => (
         title="Atividades"
         hideNavBar
       />
+      <Scene key="exercises" component={ExercisesPage} title="Exercícios" />
     </Stack>
   </Router>
 );

@@ -31,13 +31,16 @@ const StatsStarComp = (props) => {
   const quantityStar = setsStarAmount(props.concluded);
   const {filledStar, emptyStar} = quantityStar;
   let viewStars = [];
+  let indexStar = 0;
 
   for (let index = 0; index < filledStar; index++) {
-    viewStars.push(<FillStar />);
+    indexStar++;
+    viewStars.push(<FillStar key={indexStar} />);
   }
 
   for (let index = 0; index < emptyStar; index++) {
-    viewStars.push(<EmptyStar />);
+    indexStar++;
+    viewStars.push(<EmptyStar key={indexStar} />);
   }
 
   return <View style={styles.content}>{viewStars}</View>;
