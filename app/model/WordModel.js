@@ -4,8 +4,7 @@ const WordModel = {
   properties: {
     idPalavra: 'int',
     descricao: 'string',
-    imagem: 'string',
-    ilustracao: 'string',
+    alias: 'string',
   },
 };
 

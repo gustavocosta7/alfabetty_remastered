@@ -4,7 +4,7 @@ import Home from '../pages/HomePage';
 import StudyPlanPage from '../pages/StudyPlanPage';
 import ExercisesPage from '../pages/ExercicesPage';
 
-const Routers = () => (
+const Routers = (props) => (
   <Router>
     <Stack key="root">
       <Scene key="home" component={Home} hideNavBar />
