@@ -1,29 +1,52 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
-import StatsStarComp from './StatsStarComp';
-import {Actions} from 'react-native-router-flux';
+import getSvg from '../services/importSvgService';
 
 const ButtonLetterComp = (props) => {
   const {letter} = props;
-  const {drawing} = letter.words[0];
+  const [defaultSvg, setDefaultSvg] = useState('');
+
+  useEffect(() => {
+    async function setSvg() {
+      try {
+        setDefaultSvg(letter.palavras[0].alias);
+      } catch (e) {}
+    }
+
+    setSvg();
+  }, []);
 
   return (
     <Pressable
-      onPress={() => {
-        Actions.exercises({letter: letter});
-      }}
+      onPress={() => {}}
       style={({pressed}) => [
         {
-          backgroundColor: pressed ? '#7FDBFF' : letter.words[0].color,
+          backgroundColor: pressed ? '#7FDBFF' : '#7FDBFF',
         },
         styles.root,
       ]}>
       <View>
-        <Text style={styles.text}>{letter.letter.toUpperCase()}</Text>
-        <StatsStarComp concluded={letter.concluded} />
+        <Text style={styles.text}>{letter.descricao}</Text>
+        {/*<StatsStarComp concluded={letter.concluded} />*/}
       </View>
-      <View style={styles.card}>{drawing}</View>
+      <View style={styles.card}>{getSvg(defaultSvg)}</View>
     </Pressable>
+    // <Pressable
+    //   onPress={() => {
+    //     Actions.exercises({letter: letter});
+    //   }}
+    //   style={({pressed}) => [
+    //     {
+    //       backgroundColor: pressed ? '#7FDBFF' : letter.words[0].color,
+    //     },
+    //     styles.root,
+    //   ]}>
+    //   <View>
+    //     <Text style={styles.text}>{letter.letter.toUpperCase()}</Text>
+    //     <StatsStarComp concluded={letter.concluded} />
+    //   </View>
+    //   <View style={styles.card}>{drawing}</View>
+    // </Pressable>
   );
 };
 

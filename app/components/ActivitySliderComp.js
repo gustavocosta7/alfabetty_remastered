@@ -8,7 +8,6 @@ const ActivitySliderComp = (props) => {
   words.map((word, index) => {
     buttonWords.push(<ButtonLetterComp key={index} letter={word} />);
   });
-
   return (
     <Swiper showButtons height={220}>
       {buttonWords}

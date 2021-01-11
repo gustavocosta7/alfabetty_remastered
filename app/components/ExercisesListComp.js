@@ -1,19 +1,31 @@
-import React from 'react';
-import {Text, FlatList, SafeAreaView, StyleSheet} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {Text, FlatList, View, SafeAreaView, StyleSheet} from 'react-native';
 import DATA from '../assets/data/data';
 import ActivitySliderComp from './ActivitySliderComp';
 import ActivityListHeader from './ActivityListHeader';
+import DbRepository from '../repository/dbRepository';
 
 const ExercisesListComp = () => {
+  const [category, setCategories] = useState([]);
+
+  useEffect(() => {
+    async function loadCategories() {
+      const categories = await DbRepository.getCategories();
+      setCategories(categories);
+    }
+
+    loadCategories();
+  }, []);
+
   return (
     <FlatList
       ListHeaderComponent={ActivityListHeader}
-      data={DATA.classification}
+      data={category}
       renderItem={({item, index}) => {
         return (
           <>
-            <Text style={styles.category}>{item.category}</Text>
-            <LetterList letters={item.letters} />
+            <Text style={styles.category}>{item.descricao}</Text>
+            <LetterList letters={item.letras} />
           </>
         );
       }}
