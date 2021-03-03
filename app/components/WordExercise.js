@@ -1,20 +1,24 @@
 import React from 'react';
 import {Text, View, StyleSheet, Image} from 'react-native';
 import PineappleSvg from '../assets/svg/words/pineapple-svg';
+import getImage from "../services/importImagesService";
+import getSvg from "../services/importSvgService";
 
-const WordExercice = () => {
+const WordExercice = (props) => {
   return (
     <View style={styles.content}>
       <View style={styles.images}>
-        <PineappleSvg width={130} />
+        {getSvg(props.letter.alias)}
         <Image
-          style={{width: 150, height: 150}}
-          source={require('../assets/img/words/pineapple-image.png')}
+          style={{width: 150, height: 150, marginLeft: 50}}
+          source={getImage(props.letter.alias)}
         />
       </View>
       <View style={styles.containerText}>
-        <Text style={styles.text}>Abacaxi</Text>
-        <Text style={[styles.text, styles.manuscrito]}>Abacaxi</Text>
+        <Text style={styles.text}>{props.letter.descricao}</Text>
+        <Text style={[styles.text, styles.manuscrito]}>
+          {props.letter.descricao}
+        </Text>
       </View>
     </View>
   );
@@ -42,7 +46,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 10,
   },
   manuscrito: {
-    fontFamily: 'Lumen',
+    fontFamily: 'irineu',
     fontSize: 100,
   },
 });

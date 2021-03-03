@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import getSvg from '../services/importSvgService';
+import StatsStarComp from './StatsStarComp';
+import {Actions} from 'react-native-router-flux';
 
 const ButtonLetterComp = (props) => {
   const {letter} = props;
   const [defaultSvg, setDefaultSvg] = useState('');
-
   useEffect(() => {
     async function setSvg() {
       try {
@@ -18,7 +19,9 @@ const ButtonLetterComp = (props) => {
 
   return (
     <Pressable
-      onPress={() => {}}
+      onPress={() => {
+        Actions.exercises({letter: letter});
+      }}
       style={({pressed}) => [
         {
           backgroundColor: pressed ? '#7FDBFF' : '#7FDBFF',
@@ -27,26 +30,10 @@ const ButtonLetterComp = (props) => {
       ]}>
       <View>
         <Text style={styles.text}>{letter.descricao}</Text>
-        {/*<StatsStarComp concluded={letter.concluded} />*/}
+        <StatsStarComp concluded={letter.porcentagem} />
       </View>
       <View style={styles.card}>{getSvg(defaultSvg)}</View>
     </Pressable>
-    // <Pressable
-    //   onPress={() => {
-    //     Actions.exercises({letter: letter});
-    //   }}
-    //   style={({pressed}) => [
-    //     {
-    //       backgroundColor: pressed ? '#7FDBFF' : letter.words[0].color,
-    //     },
-    //     styles.root,
-    //   ]}>
-    //   <View>
-    //     <Text style={styles.text}>{letter.letter.toUpperCase()}</Text>
-    //     <StatsStarComp concluded={letter.concluded} />
-    //   </View>
-    //   <View style={styles.card}>{drawing}</View>
-    // </Pressable>
   );
 };
 
