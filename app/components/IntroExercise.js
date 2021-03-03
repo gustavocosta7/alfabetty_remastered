@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 10,
   },
   manuscrito: {
-    fontFamily: 'Lumen',
+    fontFamily: 'irineu',
     fontSize: 130,
     marginLeft: 40,
     marginRight: 40,

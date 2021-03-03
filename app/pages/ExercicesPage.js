@@ -8,17 +8,20 @@ import WordExercice from '../components/WordExercise';
 function getExercise(step, props) {
   switch (step) {
     case 0:
-      return <IntroExercise letter={props} />;
+      return <IntroExercise letter={props.descricao} />;
     case 1:
-      return <WordExercice letter={props} />;
+      return <WordExercice letter={props.palavras[0]} />;
+    case 2:
+      return <WordExercice letter={props.palavras[1]} />;
+    case 3:
+      return <WordExercice letter={props.palavras[2]} />;
   }
 }
 
 const ExercisesPage = (props) => {
   const [step, setStep] = useState(0);
   const {letter} = props;
-  const Exercise = getExercise(step, letter.letter);
-
+  const Exercise = getExercise(step, letter);
   return (
     <LinearGradient colors={['#293896', '#0398DB']} style={styles.content}>
       {Exercise}
