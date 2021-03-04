@@ -4,6 +4,7 @@ import IntroExercise from '../components/IntroExercise';
 import LinearGradient from 'react-native-linear-gradient';
 import NextButton from '../assets/svg/next-button';
 import WordExercice from '../components/WordExercise';
+import SpeechExercise from '../components/SpeechExercise';
 
 function getExercise(step, props) {
   switch (step) {
@@ -15,6 +16,8 @@ function getExercise(step, props) {
       return <WordExercice letter={props.palavras[1]} />;
     case 3:
       return <WordExercice letter={props.palavras[2]} />;
+    case 4:
+      return <SpeechExercise letter={props.palavras[2]}  />;
   }
 }
 

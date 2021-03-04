@@ -1,8 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet, Image} from 'react-native';
-import PineappleSvg from '../assets/svg/words/pineapple-svg';
-import getImage from "../services/importImagesService";
-import getSvg from "../services/importSvgService";
+import getImage from '../services/importImagesService';
+import getSvg from '../services/importSvgService';
 
 const WordExercice = (props) => {
   return (
