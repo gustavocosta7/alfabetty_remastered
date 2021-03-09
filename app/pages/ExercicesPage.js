@@ -17,7 +17,7 @@ function getExercise(step, props) {
     case 3:
       return <WordExercice letter={props.palavras[2]} />;
     case 4:
-      return <SpeechExercise letter={props.palavras[2]}  />;
+      return <SpeechExercise letter={props.palavras[2]} />;
   }
 }
 
